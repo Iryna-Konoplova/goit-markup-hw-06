@@ -834,7 +834,7 @@ address a:focus {
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
-  padding: 8px;
+  padding: 40px;
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -845,11 +845,72 @@ address a:focus {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.caption-modal {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal-name,
+.modal-phone,
+.modal-mail {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.person,
+.phone,
+.mail {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  margin: 0;
+}
+
+.modal-name input,
+.modal-phone input,
+.modal-mail input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+}
+
+.modal-name p,
+.modal-phone p,
+.modal-mail p {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+/*.modal-name input,
+.modal-phone input,
+.modal-mail input:focus-within {
+  border: 1px solid red;*/
+}
+
 .button-modal {
-  display: flex;
+  position: absolute;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
+  margin-left: auto;*/
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;

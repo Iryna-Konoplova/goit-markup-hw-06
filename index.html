@@ -312,13 +312,36 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button-modal" data-modal-close>
-          <!-- <img src="./imeges/close.svg" alt="close"> -->
+          
           <svg class="close" width="11px" height="11px">
             <use href="./imeges/symbol-defs.svg#icon-close"></use>
           </svg>
     
         </button>
-    
+    <form class="form-modal">
+      <p class="caption-modal">Оставьте свои данные, мы вам перезвоним</p>
+      <label for="" class="modal-name" >
+        <p >Имя</p>
+        <input type="text" name="name" >
+        <svg class="person" width="18px" height="18px">
+          <use href="./imeges/symbol-defs.svg#icon-person"></use>
+        </svg>
+      </label>
+      <label for="" class="modal-phone">
+        <p>Телефон</p>
+        <input type="tel" name="phone">
+        <svg class="phone" width="18px" height="18px">
+          <use href="./imeges/symbol-defs.svg#icon-phone"></use>
+        </svg>
+      </label>
+      <label for="" class="modal-mail">
+        <p>Почта</p>
+        <input type="email" name="mail">
+        <svg class="mail" width="18px" height="18px">
+          <use href="./imeges/symbol-defs.svg#icon-email"></use>
+        </svg>
+      </label>
+    </form>
       </div>
     </div>
     </main>
