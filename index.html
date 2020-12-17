@@ -322,24 +322,33 @@
       <p class="caption-modal">Оставьте свои данные, мы вам перезвоним</p>
       <label for="" class="modal-name" >
         <p >Имя</p>
-        <input type="text" name="name" >
+        <input type="text" name="name" class="input-name">
         <svg class="person" width="18px" height="18px">
           <use href="./imeges/symbol-defs.svg#icon-person"></use>
         </svg>
       </label>
       <label for="" class="modal-phone">
         <p>Телефон</p>
-        <input type="tel" name="phone">
+        <input type="tel" name="phone" class="input-tel">
         <svg class="phone" width="18px" height="18px">
           <use href="./imeges/symbol-defs.svg#icon-phone"></use>
         </svg>
       </label>
-      <label for="" class="modal-mail">
+      <label for="" class="modal-email">
         <p>Почта</p>
-        <input type="email" name="mail">
-        <svg class="mail" width="18px" height="18px">
+        <input type="email" name="email" class="input-email">
+        <svg class="email" width="18px" height="18px">
           <use href="./imeges/symbol-defs.svg#icon-email"></use>
         </svg>
+      </label>
+      <label for="" class="modal-comment">
+        <p>Комментарий</p>
+        <textarea name="comment" placeholder="Введите текст" class="comment"></textarea>
+      </label>
+      <label for="" class="modal-agreement">
+        <input type="checkbox" name="agreement" class="check-input">
+        <span class="check-box"></span>
+        <span class="check">Соглашаюсь с рассылкой и принимаю  <a href="" class="contract">Условия договора</a></span>
       </label>
     </form>
       </div>

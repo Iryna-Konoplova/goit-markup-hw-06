@@ -805,6 +805,8 @@ address a:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* modal */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -831,8 +833,8 @@ address a:focus {
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   border-radius: 4px;
   padding: 40px;
 
@@ -844,6 +846,32 @@ address a:focus {
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.close {
+  fill: currentColor;
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  outline: #ffffff00;
+  color: var(--accent-color);
+}
+
+/* form-modal */
 
 .caption-modal {
   margin-top: 0;
@@ -859,7 +887,7 @@ address a:focus {
 
 .modal-name,
 .modal-phone,
-.modal-mail {
+.modal-email {
   position: relative;
   display: block;
   margin-bottom: 10px;
@@ -867,16 +895,19 @@ address a:focus {
 
 .person,
 .phone,
-.mail {
+.email {
   position: absolute;
   bottom: 11px;
   left: 12px;
   margin: 0;
+
+  color: #000000;
+  fill: currentColor;
 }
 
-.modal-name input,
-.modal-phone input,
-.modal-mail input {
+.input-name,
+.input-tel,
+.input-email {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -885,9 +916,42 @@ address a:focus {
   border-radius: 4px;
 }
 
+.input-name:focus,
+.input-tel:focus,
+.input-email:focus,
+.comment:focus {
+  outline: transparent;
+  border: 1px solid var(--accent-color);
+}
+
+.input-name:focus + .person,
+.input-tel:focus + .phone,
+.input-email:focus + .email {
+  color: var(--accent-color);
+}
+
+.comment {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
 .modal-name p,
 .modal-phone p,
-.modal-mail p {
+.modal-email p,
+.modal-comment p {
   margin-top: 0;
   margin-bottom: 4px;
 
@@ -897,25 +961,47 @@ address a:focus {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
-/*.modal-name input,
-.modal-phone input,
-.modal-mail input:focus-within {
-  border: 1px solid red;*/
+
+.modal-agreement span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 }
 
-.button-modal {
-  position: absolute;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;*/
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  cursor: pointer;
+.contract {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  margin-left: 5px;
+}
 
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 52px;
+  bottom: 124px;
+
+  background-image: url(../imeges/check-box.svg);
+}
+
+.check {
+  margin-right: 12px;
+  display: flex;
+  justify-content: flex-end;
 }
